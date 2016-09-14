@@ -12,10 +12,6 @@ It is a project that helps you start developing with AngularJS. Features include
 Instalation
 -------------
 
-Copy template code from a github
-```bash
-git clone https://github.com/somenugget/sn-angular-template
-```
 
 Move to downloaded directory and intall `npm` packages
 ```bash
