@@ -1,0 +1,33 @@
+{
+  "name": "sn-angular-template",
+  "description": "Angular JS template",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "AngularJS",
+    "template"
+  ],
+  "authors": [
+    "Shcherbakan Dmitriy"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.*",
+    "angular-ui-router": "~0.2.17",
+    "angular-resource": "1.4.*",
+    "bootstrap": "#v4.0.0-alpha.2",
+    "tether": "~1.1.1",
+    "moment": "^2.15.0",
+    "angular-bootstrap-calendar": "^0.23.0"
+  }
+}

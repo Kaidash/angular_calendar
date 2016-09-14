@@ -1,0 +1,121 @@
+.git-search-form {
+	margin-top: 40px;
+
+	.form-control-label {
+		h2 {
+			font-size: 40px;
+		}
+	}
+}
+
+calendar{
+	width: 65%;
+	float: right;
+	div.header{
+		position: relative;
+		float: left;
+		width: 100%;
+		background: #2875c7;
+		height: 40px;
+		color: white;
+		i:after, i:before {
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+
+		i{
+			width: 15px;
+			height: 15px;
+			cursor: pointer;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		i.fa-angle-left{
+			position: absolute;
+			left: -4px;
+			&:before{
+				border-color: rgba(194, 225, 245, 0);
+				border-right-color: #c2e1f5;
+				border-width: 11px;
+				margin-top: -11px;
+				margin-left: -4px;
+			}
+			&:after{
+				border-color: rgba(136, 183, 213, 0);
+				border-right-color: #2875c7;
+				border-width: 7px;
+				margin-top: -8px;
+				margin-left: 3px;
+			}
+		}
+		i.fa-angle-right{
+			position: absolute;
+			right: 0;
+			margin-left: -40px;
+			&:before{
+				border-color: rgba(194, 225, 245, 0);
+				border-left-color: #c2e1f5;
+				border-width: 11px;
+				margin-top: -11px;
+			}
+			&:after{
+				border-color: rgba(136, 183, 213, 0);
+				border-left-color: #2875c7;
+				border-width: 7px;
+				margin-top: -8px;
+			}
+		}
+		span{
+			font-weight: bold;
+			font-size: 20px;
+			display: block;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+	}
+	div.week{
+		float: left;
+		width: 100%;
+		border-top: solid 1px #cccccc;
+		span.day:first-child{
+			border-left: none;
+		}
+		span.day.today{
+			background: #E3F2FF;
+		}
+		span{
+			color: #2875c7;
+			font-weight: bold;
+		}
+		span.day{
+			float: left;
+			width: 14.28571429%;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			border-left: solid 1px #cccccc;
+			font-size: 1em;
+			text-align: center;
+			height: 80px;
+			line-height: 80px !important;
+			display: inline-block;
+			vertical-align: middle;
+			background: white;
+			cursor: pointer;
+			color: black;
+		}
+		span.day.different-month{
+			color: #C0C0C0;
+		}
+		span.day.selected{
+			background: #2875c7;
+			color: white;
+		}
+	}
+}
