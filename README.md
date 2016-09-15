@@ -20,4 +20,6 @@ Build your project and start a webserver with command
 gulp
 ```
 
-If you see text Can not GET. Restart Gulp.
+```bash
+If you see text Can not GET. Restart Gulp.```
+
