@@ -21,5 +21,5 @@ gulp
 ```
 
 ```bash
-If you see text Can not GET. Restart Gulp.```
+If you see text Can not GET. Restart command gulp .```
 
