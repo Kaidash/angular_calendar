@@ -1,22 +1,22 @@
-// 'use strict';
-// (function(){
-//
-//     angular.module('snApp').filter('customFilter', 'customFilter');
-//
-//     function customFilter() {
-//         return function (items, criterion) {
-//             console.log('Джина вызывали?');
-//
-//             // for(var i in items){
-//             //     var item = items[i];
-//             //     if(item.val == criterion.val){
-//             //         tmp[i] = item;
-//             //     }
-//             // }
-//             // return tmp;
-//             return true
-//         }
-//     }
-//
-// })();
+'use strict';
+(function(){
+
+    angular.module('snApp').filter('filterCat', [filterCat]);
+
+    function filterCat() {
+
+        return function(input, key) {
+            var unique = {};
+            var uniqueList = [];
+            for(var i = 0; i < input.length; i++){
+                if(typeof unique[input[i][key]] == "undefined"){
+                    unique[input[i][key]] = "";
+                    uniqueList.push(input[i]);
+                }
+            }
+            return uniqueList;
+        };
+    }
+
+})();
 

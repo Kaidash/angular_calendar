@@ -13,7 +13,7 @@
             templateUrl: "tpl/calendar.html",
             scope: {
                 selected: "=",
-                event:"@"
+                ocw:"=data"
             },
             link: function(scope) {
                 scope.selected = _removeTime(scope.selected || moment());
@@ -54,7 +54,7 @@
         var done = false, date = start.clone(), monthIndex = date.month(), count = 0;
         while (!done) {
 
-            scope.weeks.push({ days: _buildWeek(date.clone(), month,scope.event) });
+            scope.weeks.push({ days: _buildWeek(date.clone(), month,scope.ocw) });
             date.add(1, "w");
             done = count++ > 2 && monthIndex !== date.month();
             monthIndex = date.month();
@@ -63,7 +63,7 @@
 
     function _buildWeek(date, month,scope) {
         var days = [];
-        var eventParsed=JSON.parse(scope);
+        var eventParsed=scope;
         function formatDate(date) {
 
             var dd = date.getDate();
