@@ -9,7 +9,12 @@
 }
 
 calendar{
-
+	.select-item{
+		width: 100px;
+		border: 0;
+		font-size: 19px;
+		margin: 35px 10px;
+	}
 	div.header{
 		position: relative;
 		float: left;

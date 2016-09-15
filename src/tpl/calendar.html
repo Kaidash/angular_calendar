@@ -1,8 +1,11 @@
-<!--<select ng-model="model.name" ng-options="item.name as item.time for item in event "></select>-->
-<select ng-model="model.id" ng-options="note.category as note.category for note in ocw|filterCat:'category'" >
-    <option value="">--Все--</option>
+<lable for="category">Категория</lable>
+<select id="category" class="select-item" ng-model="model.category"  ng-options="note.category as note.category for note in ocw|filterCat:'category'" >
+    <option  value="" >All</option>
 </select>
-
+<lable for="vip">VIP Статус</lable>
+<select id="vip" class="select-item" ng-model="model.VIP"   ng-options="note.VIP as note.VIP for note in ocw|filterCat:'VIP'">
+    <option value="">All</option>
+</select>
 <div class="header">
 
     <i class="fa fa-angle-left" ng-click="previous()"></i>
@@ -19,5 +22,5 @@
     <span class="day">Sat</span>
 </div>
 <div class="week" ng-repeat="week in weeks">
-    <span class="day" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }" ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}<div ng-repeat="item in day.eventsList|orderBy:'-time'">{{item.time}}{{item.name}}{{item.category}}</div></span>
+    <span class="day" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }" ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}<div ng-repeat="item in day.eventsList | filter:(model.category||undefined)||(model.VIP||undefined) |orderBy:'-time'">{{item.time}}  {{item.name}}  {{item.category}}</div></span>
 </div>

@@ -77,12 +77,9 @@
 
             return yy + '-' + mm + '-' + dd;
         }
-        // console.log(eventParsed);
         function returnEvent(date) {
             var arr=[];
-            console.log();
             for (var j=0;j<eventParsed.length;j++){
-                // console.log(eventParsed[j].date);
                 if(formatDate(date._d)==eventParsed[j].date){
                     arr.push(eventParsed[j])
                 }
@@ -99,10 +96,8 @@
                 date: date,
                 eventsList:returnEvent(date)
             });
-            console.log(days);
-            // for (var j=0;j<eventParsed.length;j++){
-            //     console.log(days)
-            // }
+
+
             date = date.clone();
             date.add(1, "d");
         }
